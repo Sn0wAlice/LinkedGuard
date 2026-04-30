@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinkedGuard</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <img src="../../assets/icons/icon-32.png" alt="" class="logo" />
+      <span class="brand">LinkedGuard</span>
+    </div>
+    <a href="#" id="open-options" class="options-link" title="Open settings">⚙</a>
+  </div>
+
+  <div class="section">
+    <div class="row-between">
+      <span class="label">Protection</span>
+      <label class="toggle">
+        <input type="checkbox" id="master-toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="section" id="action-section">
+    <div class="label mb-6">Default action</div>
+    <div class="segment-control" id="action-toggle">
+      <button class="seg-btn disabled" data-value="archive" disabled title="Coming soon">🗄 Archive (soon)</button>
+      <button class="seg-btn" data-value="flag">⚠ Flag</button>
+    </div>
+  </div>
+
+  <div class="section" id="lists-section">
+    <div class="label mb-6">Filter lists</div>
+    <div id="lists-container"></div>
+  </div>
+
+  <div class="section stats-section">
+    <div class="stats-grid">
+      <div class="stat">
+        <span class="stat-value" id="stat-archived">0</span>
+        <span class="stat-label">Archived</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="stat-flagged">0</span>
+        <span class="stat-label">Flagged</span>
+      </div>
+    </div>
+    <div class="last-action" id="last-action"></div>
+  </div>
+
+  <div class="footer">
+    <a href="#" id="view-log">Activity log</a>
+    <a href="#" id="open-settings">Settings</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

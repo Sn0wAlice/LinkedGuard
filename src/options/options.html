@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinkedGuard — Settings</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="header-brand">
+          <img src="../../assets/icons/icon-32.png" alt="" class="logo" />
+          <span class="brand-name">LinkedGuard</span>
+        </div>
+        <div class="header-toggle">
+          <span class="toggle-label">Protection</span>
+          <label class="toggle">
+            <input type="checkbox" id="master-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="lists">Filter Lists</button>
+      <button class="tab" data-tab="settings">Settings</button>
+      <button class="tab" data-tab="log">Activity Log</button>
+    </nav>
+
+    <main class="content">
+
+      <!-- TAB: Filter Lists -->
+      <section id="tab-lists" class="tab-panel active">
+        <div class="panel-header">
+          <h2>Filter Lists</h2>
+          <button class="btn-primary" id="add-list-btn">+ Add Custom List</button>
+        </div>
+        <div id="lists-container"></div>
+      </section>
+
+      <!-- TAB: Settings -->
+      <section id="tab-settings" class="tab-panel">
+        <div class="panel-header">
+          <h2>Settings</h2>
+        </div>
+
+        <div class="settings-card">
+          <div class="setting-row">
+            <div>
+              <div class="setting-name">Default action</div>
+              <div class="setting-desc">What happens when a first message matches a keyword</div>
+            </div>
+            <div class="segment-control" id="default-action-toggle">
+              <button class="seg-btn disabled" data-value="archive" disabled title="Coming soon">🗄 Archive (soon)</button>
+              <button class="seg-btn" data-value="flag">⚠ Flag</button>
+            </div>
+          </div>
+
+          <div class="setting-row">
+            <div>
+              <div class="setting-name">Case sensitive matching</div>
+              <div class="setting-desc">When enabled, "Spam" ≠ "spam"</div>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" id="case-sensitive" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <div class="setting-name mb-12">Data</div>
+          <div class="data-actions">
+            <button class="btn-secondary" id="export-btn">Export config</button>
+            <label class="btn-secondary" style="cursor:pointer;">
+              Import config
+              <input type="file" id="import-input" accept=".json" style="display:none;" />
+            </label>
+            <button class="btn-danger" id="reset-btn">Reset to defaults</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: Activity Log -->
+      <section id="tab-log" class="tab-panel">
+        <div class="panel-header">
+          <h2>Activity Log</h2>
+          <div class="log-actions">
+            <span class="log-total" id="log-total"></span>
+            <button class="btn-secondary" id="clear-log-btn">Clear log</button>
+          </div>
+        </div>
+        <div id="log-container">
+          <p class="empty-state">No activity yet.</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Add keyword modal -->
+  <div class="modal-overlay" id="modal-overlay" hidden>
+    <div class="modal">
+      <h3 class="modal-title" id="modal-title">Add keyword</h3>
+      <input type="text" class="modal-input" id="modal-input" placeholder="Type a keyword…" />
+      <div class="modal-footer">
+        <button class="btn-secondary" id="modal-cancel">Cancel</button>
+        <button class="btn-primary" id="modal-confirm">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
