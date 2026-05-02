@@ -110,7 +110,6 @@ LinkedGuard/
 | Permission | Why |
 |---|---|
 | `storage` | Persist the user's config (enabled lists, custom keywords, activity log). Uses `sync` when available, falls back to `local`. |
-| `tabs` | Open the options page on a specific tab (Settings or Activity Log) from the popup. |
 | `host_permissions: https://www.linkedin.com/*` | Restrict the content script to LinkedIn only. No other domain is touched. |
 
 No remote calls. No analytics. No fetch to anything outside `linkedin.com`.

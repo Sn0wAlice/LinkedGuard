@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "LinkedGuard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatically flags unsolicited LinkedIn messages — recruiter spam, crypto scams, cold pitches, MLM, phishing — directly in your conversation list. 100% local, no tracking.",
 
   "browser_specific_settings": {
@@ -15,8 +15,7 @@
   },
 
   "permissions": [
-    "storage",
-    "tabs"
+    "storage"
   ],
 
   "host_permissions": [

@@ -78,7 +78,6 @@ LinkedGuard runs **entirely in your browser**. Nothing ever leaves your device:
 ### Permissions explained
 
 - **`storage`** - saves your enabled lists, custom keywords and activity log locally
-- **`tabs`** - opens the options page on the right tab when you click "Settings" or "Activity log" in the popup
 - **`https://www.linkedin.com/*`** - the only site this extension is allowed to read or modify
 
 ### Open source
@@ -162,7 +161,6 @@ This data never leaves your device. It is only accessible to LinkedGuard itself,
 ## Permissions
 
 - `storage` - to save your settings locally
-- `tabs` - to open the options page on the correct tab when clicking links in the popup
 - `host_permissions: https://www.linkedin.com/*` - restricts the content script to LinkedIn only
 
 ## Removing your data
@@ -183,7 +181,6 @@ You can host this as `PRIVACY.md` on the repo and paste the URL into the form, o
 | Permission | Justification |
 |---|---|
 | `storage` | Persist user-configured keyword lists, custom keywords and a local activity log of flagged conversations. All storage is local; nothing is transmitted off-device. |
-| `tabs` | Open the options page on a specific section (Filter Lists / Activity Log) when the user clicks corresponding links in the popup. Used only for `tabs.create({ url })`. |
 | `host_permissions` for `https://www.linkedin.com/*` | LinkedGuard reads conversation previews on LinkedIn to match keywords and apply visual flags. This is the sole purpose of the extension and the only domain it touches. |
 
 ### "Single purpose" description (Chrome required field)
